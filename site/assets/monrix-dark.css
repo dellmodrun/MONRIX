@@ -1,0 +1,84 @@
+/* MONRIX dark surface */
+:root {
+  --page: #030303;
+  --win: #090909;
+  --win2: #111111;
+  --win3: #171717;
+  --bd: #353535;
+  --bd2: #242424;
+  --txt: #f2f2f2;
+  --txt2: #aaaaaa;
+  --link: #ff934d;
+  --visited: #d8793b;
+  --xmr2: #ff7a1a;
+  --zec2: #f2bf3e;
+  --up: #51d985;
+  --dn: #ff6868;
+}
+
+html,
+body {
+  background: #030303;
+  color: var(--txt);
+}
+
+code {
+  background: #151515;
+  color: #f1f1f1;
+}
+
+.inner h3,
+.quote b,
+.note b {
+  color: var(--txt);
+}
+
+.quote.z { background: #1b1709; }
+.quote.x { background: #211108; }
+.quote.s { background: #160e23; }
+.quote.bad { background: #161616; }
+
+.code {
+  background: #070707;
+  color: #e8e8e8;
+}
+
+.code .c { color: #929292; }
+.shot { background: #060606; }
+
+.warnbox,
+.note { background: #1d1008; }
+
+.warnbox.zec,
+.note.zec { background: #1b1708; }
+
+.warnbox.sol,
+.note.sol { background: #150e22; }
+
+.warnbox.bad,
+.note.bad { background: #151515; }
+
+table.ft th.cex {
+  background: linear-gradient(#3a3a3a, #242424);
+  color: #f2f2f2;
+  border-color: #555555;
+}
+
+.chartbox { background: #070707; }
+
+.chartbox .bar button {
+  background: linear-gradient(#282828, #151515);
+  color: #eeeeee;
+  border-color: #4a4a4a;
+}
+
+.btn.grey {
+  background: linear-gradient(#2a2a2a, #141414);
+  color: #eeeeee !important;
+  border-color: #555555;
+}
+
+.btn.grey:hover {
+  background: linear-gradient(#383838, #202020);
+}
+
