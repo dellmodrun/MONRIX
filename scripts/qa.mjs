@@ -3,6 +3,7 @@ import { tmpdir } from 'node:os';
 import { join } from 'node:path';
 
 const pages = ['/', '/guide.html', '/app.html', '/terminal.html', '/download.html', '/privacy.html', '/vault.html', '/exchange.html', '/agent.html', '/network.html'];
+const baseUrl = process.env.MONRIX_URL || 'http://127.0.0.1:4391';
 const tabs = await fetch('http://127.0.0.1:9333/json').then((response) => response.json());
 const tab = tabs.find((item) => item.type === 'page');
 if (!tab) throw new Error('No Chrome debugging tab is available');
@@ -27,7 +28,7 @@ await call('Page.enable');
 await call('Runtime.enable');
 const results = [];
 for (const path of pages) {
-  await call('Page.navigate', { url: `http://127.0.0.1:4391${path}` });
+  await call('Page.navigate', { url: `${baseUrl}${path}` });
   await new Promise((resolve) => setTimeout(resolve, path === '/app.html' ? 5000 : 2500));
   const evaluated = await call('Runtime.evaluate', {
     expression: `JSON.stringify({
@@ -45,7 +46,7 @@ for (const path of pages) {
   results.push(JSON.parse(evaluated.result.result.value));
   if (path === '/') {
     const screenshot = await call('Page.captureScreenshot', { format: 'png', captureBeyondViewport: true });
-    await writeFile(join(tmpdir(), 'moneyero-local-home.png'), Buffer.from(screenshot.result.data, 'base64'));
+    await writeFile(join(tmpdir(), 'monrix-local-home.png'), Buffer.from(screenshot.result.data, 'base64'));
   }
 }
 socket.close();

@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vault: Monero and Zcash - Moneyero</title>
+  <title>Vault: Monero and Zcash - MONRIX</title>
   <meta name="description" content="Native Monero wallet through monero-wallet-rpc with coin control, Zcash shielded and transparent pools through zcashd or zallet, and the vault-encrypted Solana signer." />
-  <link rel="icon" type="image/svg+xml" href="/MONRIX/logo.svg" /><link rel="icon" type="image/png" sizes="400x400" href="/MONRIX/logo.png" /><link rel="apple-touch-icon" href="/MONRIX/logo.png" /><meta property="og:site_name" content="Moneyero" /><meta property="og:image" content="https://dellmodrun.github.io/MONRIX/banner.png" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:image" content="https://dellmodrun.github.io/MONRIX/banner.png" />
+  <link rel="icon" type="image/png" href="/MONRIX/logo.png" /><link rel="icon" type="image/png" sizes="400x400" href="/MONRIX/logo.png" /><link rel="apple-touch-icon" href="/MONRIX/logo.png" /><meta property="og:site_name" content="MONRIX" /><meta property="og:image" content="https://dellmodrun.github.io/MONRIX/banner.png" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:image" content="https://dellmodrun.github.io/MONRIX/banner.png" />
   <script type="module" crossorigin src="/MONRIX/assets/modulepreload-polyfill-B5Qt9EMX.js"></script>
   <script type="module" crossorigin src="/MONRIX/assets/site-A2PvD1kf.js"></script>
   <link rel="stylesheet" crossorigin href="/MONRIX/assets/site-DsI4QA2_.css">
@@ -17,7 +17,7 @@
   <div class="catbg"><span>Vault: Monero and Zcash, keys where they belong</span><span class="pages">Board: Settlement (private)</span></div>
 
   <div class="post">
-    <div class="poster"><div class="name op">Moneyero</div><div class="rank">Hero Member</div><div class="stars x">★★★★★</div><div class="avatar"><img src="/MONRIX/logo.png" alt="Moneyero" /></div>Activity: 0.1<br>Merit: honest<br><span class="on">Online</span></div>
+    <div class="poster"><div class="name op">MONRIX</div><div class="rank">Hero Member</div><div class="stars x">★★★★★</div><div class="avatar"><img src="/MONRIX/logo.png" alt="MONRIX" /></div>Activity: 0.1<br>Merit: honest<br><span class="on">Online</span></div>
     <div class="postarea">
       <div class="phead"><span class="subject">Vault: Monero and Zcash, keys where they belong</span><span class="date">« <b>on:</b> today »</span></div>
       <div class="inner">
@@ -33,7 +33,7 @@
         <h3>Coin control, in plain words</h3>
         <p>Your Monero balance is really a pile of separate coins, one per payment you received. The <b>Outputs</b> table shows them. You can <b>freeze</b> a coin so the wallet never spends it (do this to any tiny deposit you did not expect: it may be someone trying to trace you). You can tick coins so the next payment uses only those. And you can <b>churn</b> a coin, which sends it to yourself so its past no longer touches its future. The app warns you before you combine coins in a way that reveals something.</p>
         <div class="quoteheader">Quote</div>
-        <div class="quote x"><b>Why not a reimplementation.</b> Moneyero runs the official Monero and Zcash wallet software and talks to it; it does not reinvent their cryptography. The reference wallets have a decade of review behind them. Moneyero adds the supervision, the warnings and the interface.</div>
+        <div class="quote x"><b>Why not a reimplementation.</b> MONRIX runs the official Monero and Zcash wallet software and talks to it; it does not reinvent their cryptography. The reference wallets have a decade of review behind them. MONRIX adds the supervision, the warnings and the interface.</div>
       </div>
     </div>
   </div>
@@ -44,12 +44,12 @@
       <div class="phead"><span class="subject">Re: Vault — technical details: Monero</span><span class="date">« <b>Reply #1</b> » <span data-px="XMR"></span> <span data-chg="XMR"></span></span></div>
       <div class="inner">
         <h3>Process</h3>
-        <p>You point Moneyero at the official <code>monero-wallet-rpc</code> binary (verify its signature from getmonero.org). It is launched bound to 127.0.0.1 with a random per-session digest login and a wallet directory inside the application data folder. Logs are captured locally. The process is stopped when the application exits.</p>
+        <p>You point MONRIX at the official <code>monero-wallet-rpc</code> binary (verify its signature from getmonero.org). It is launched bound to 127.0.0.1 with a random per-session digest login and a wallet directory inside the application data folder. Logs are captured locally. The process is stopped when the application exits.</p>
         <h3>Wallets</h3>
         <ul>
           <li>Create, open, or restore from a 25-word seed with restore height and optional seed offset.</li>
           <li>Wallet files are encrypted by the wallet process with the password you choose.</li>
-          <li>The seed is shown once, by the wallet process, at creation. It is never stored or transmitted by Moneyero. Viewing it later requires the vault to be unlocked and is audited.</li>
+          <li>The seed is shown once, by the wallet process, at creation. It is never stored or transmitted by MONRIX. Viewing it later requires the vault to be unlocked and is audited.</li>
         </ul>
         <h3>Node</h3>
         <ul>
@@ -76,7 +76,7 @@
       <div class="phead"><span class="subject">Re: Vault — technical details: Zcash, transparent kept visible</span><span class="date">« <b>Reply #2</b> » <span data-px="ZEC"></span> <span data-chg="ZEC"></span></span></div>
       <div class="inner">
         <h3>Backend</h3>
-        <p>Moneyero speaks the <code>zcashd</code> wallet JSON-RPC surface, which <code>zallet</code>, its successor, preserves. Credentials come from the vault or the node's cookie file. The node process can be started and stopped from the Vault if you provide the binary path.</p>
+        <p>MONRIX speaks the <code>zcashd</code> wallet JSON-RPC surface, which <code>zallet</code>, its successor, preserves. Credentials come from the vault or the node's cookie file. The node process can be started and stopped from the Vault if you provide the binary path.</p>
         <h3>Pools and addresses</h3>
         <ul>
           <li>Orchard, Sapling and transparent balances are shown separately. Transparent balance is flagged until shielded.</li>

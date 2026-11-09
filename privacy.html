@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Security and threat model - Moneyero</title>
-  <meta name="description" content="What Moneyero protects against, what it does not, who can observe what, Monero versus Zcash, and where data lives on disk." />
-  <link rel="icon" type="image/svg+xml" href="/MONRIX/logo.svg" /><link rel="icon" type="image/png" sizes="400x400" href="/MONRIX/logo.png" /><link rel="apple-touch-icon" href="/MONRIX/logo.png" /><meta property="og:site_name" content="Moneyero" /><meta property="og:image" content="https://dellmodrun.github.io/MONRIX/banner.png" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:image" content="https://dellmodrun.github.io/MONRIX/banner.png" />
+  <title>Security and threat model - MONRIX</title>
+  <meta name="description" content="What MONRIX protects against, what it does not, who can observe what, Monero versus Zcash, and where data lives on disk." />
+  <link rel="icon" type="image/png" href="/MONRIX/logo.png" /><link rel="icon" type="image/png" sizes="400x400" href="/MONRIX/logo.png" /><link rel="apple-touch-icon" href="/MONRIX/logo.png" /><meta property="og:site_name" content="MONRIX" /><meta property="og:image" content="https://dellmodrun.github.io/MONRIX/banner.png" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:image" content="https://dellmodrun.github.io/MONRIX/banner.png" />
   <script type="module" crossorigin src="/MONRIX/assets/modulepreload-polyfill-B5Qt9EMX.js"></script>
   <script type="module" crossorigin src="/MONRIX/assets/site-A2PvD1kf.js"></script>
   <link rel="stylesheet" crossorigin href="/MONRIX/assets/site-DsI4QA2_.css">
@@ -17,7 +17,7 @@
   <div class="catbg"><span>Security: the threat model, in full</span><span class="pages">Board: Infrastructure · sticky</span></div>
 
   <div class="post" id="adversaries">
-    <div class="poster"><div class="name op">Moneyero</div><div class="rank">Hero Member</div><div class="stars x">★★★★★</div><div class="avatar"><img src="/MONRIX/logo.png" alt="Moneyero" /></div>Activity: 0.1<br>Merit: honest<br><span class="on">Online</span></div>
+    <div class="poster"><div class="name op">MONRIX</div><div class="rank">Hero Member</div><div class="stars x">★★★★★</div><div class="avatar"><img src="/MONRIX/logo.png" alt="MONRIX" /></div>Activity: 0.1<br>Merit: honest<br><span class="on">Online</span></div>
     <div class="postarea">
       <div class="phead"><span class="subject">Security: the threat model, in full</span><span class="date">« <b>on:</b> today »</span></div>
       <div class="inner">
@@ -52,7 +52,7 @@
   </div>
 
   <div class="post alt" id="observers">
-    <div class="poster"><div class="name op">Moneyero</div><div class="rank">Hero Member</div><div class="stars x">★★★★★</div><div class="avatar"><img src="/MONRIX/logo.png" alt="Moneyero" /></div><span class="on">Online</span></div>
+    <div class="poster"><div class="name op">MONRIX</div><div class="rank">Hero Member</div><div class="stars x">★★★★★</div><div class="avatar"><img src="/MONRIX/logo.png" alt="MONRIX" /></div><span class="on">Online</span></div>
     <div class="postarea">
       <div class="phead"><span class="subject">Re: Security — technical details: who sees what, and the rules the code follows</span><span class="date">« <b>Reply #1</b> »</span></div>
       <div class="inner">
@@ -82,7 +82,7 @@
   </div>
 
   <div class="post" id="xmr-vs-zec">
-    <div class="poster"><div class="name op">Moneyero</div><div class="rank">Hero Member</div><div class="stars x">★★★★★</div><div class="avatar"><img src="/MONRIX/logo.png" alt="Moneyero" /></div><span class="on">Online</span></div>
+    <div class="poster"><div class="name op">MONRIX</div><div class="rank">Hero Member</div><div class="stars x">★★★★★</div><div class="avatar"><img src="/MONRIX/logo.png" alt="MONRIX" /></div><span class="on">Online</span></div>
     <div class="postarea">
       <div class="phead"><span class="subject">Re: Security — Monero and Zcash: similar cryptography, very different crowds to hide in</span><span class="date">« <b>Reply #2</b> »</span></div>
       <div class="inner">
@@ -97,7 +97,7 @@
           <tr><td>Set fragmentation</td><td class="lv-strong">one set</td><td class="lv-part">split across Sapling and Orchard pools; moving between pools or in from transparent reveals the amount</td><td class="lv-none">n/a</td></tr>
           <tr><td>Weak point</td><td class="lv-part">timing and the network path; exchange hops</td><td class="lv-part">the transparent side: most inflows and many wallets still touch it</td><td class="lv-none">everything</td></tr>
         </table></div>
-        <h3>What Moneyero does with that</h3>
+        <h3>What MONRIX does with that</h3>
         <ul>
           <li><b>Monero is the default treasury.</b> The Exchange proposes a fresh Monero subaddress for settlement, and the Agent's "move profit to private" rule template points at XMR.</li>
           <li><b>Zcash is kept shielded by force of habit.</b> Transparent and shielded balances are never summed. Transparent funds are flagged until shielded. Sends default to FullPrivacy and anything lower is a critical warning.</li>
@@ -110,13 +110,13 @@
   </div>
 
   <div class="post alt" id="disk">
-    <div class="poster"><div class="name op">Moneyero</div><div class="rank">Hero Member</div><div class="stars x">★★★★★</div><div class="avatar"><img src="/MONRIX/logo.png" alt="Moneyero" /></div><span class="on">Online</span></div>
+    <div class="poster"><div class="name op">MONRIX</div><div class="rank">Hero Member</div><div class="stars x">★★★★★</div><div class="avatar"><img src="/MONRIX/logo.png" alt="MONRIX" /></div><span class="on">Online</span></div>
     <div class="postarea">
       <div class="phead"><span class="subject">Re: Security — technical details: data on disk</span><span class="date">« <b>Reply #3</b> »</span></div>
       <div class="inner">
         <p>Use full-disk encryption. These files describe your own activity.</p>
         <table class="spec">
-          <tr><td>moneyero.db</td><td>SQLite: settings, encrypted secrets, activity, trades, orders, rules, proposals, audit. Secrets are ciphertext; the rest is plaintext metadata about your own activity.</td></tr>
+          <tr><td>monrix.db</td><td>SQLite: settings, encrypted secrets, activity, trades, orders, rules, proposals, audit. Secrets are ciphertext; the rest is plaintext metadata about your own activity.</td></tr>
           <tr><td>monero/wallets/</td><td>Wallet files encrypted by monero-wallet-rpc with the wallet password.</td></tr>
           <tr><td>wg/*.conf</td><td>WireGuard configs including the private key, because WireGuard must read them. Mode 0600 on Unix.</td></tr>
           <tr><td>logs/</td><td>Standard output of managed processes. Review before sharing.</td></tr>

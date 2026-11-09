@@ -1,5 +1,5 @@
 {
-  "name": "moneyero-local",
+  "name": "monrix-local",
   "private": true,
   "scripts": {
     "mirror": "node scripts/mirror.mjs",

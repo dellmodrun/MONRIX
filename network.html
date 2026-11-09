@@ -2,9 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Network: built-in VPN - Moneyero</title>
+  <title>Network: built-in VPN - MONRIX</title>
   <meta name="description" content="A WireGuard VPN inside the wallet: no driver, no admin rights, fails closed. Plus Tor routing, system WireGuard control and real leak tests." />
-  <link rel="icon" type="image/svg+xml" href="/MONRIX/logo.svg" /><link rel="icon" type="image/png" sizes="400x400" href="/MONRIX/logo.png" /><link rel="apple-touch-icon" href="/MONRIX/logo.png" /><meta property="og:site_name" content="Moneyero" /><meta property="og:image" content="https://dellmodrun.github.io/MONRIX/banner.png" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:image" content="https://dellmodrun.github.io/MONRIX/banner.png" />
+  <link rel="icon" type="image/png" href="/MONRIX/logo.png" /><link rel="icon" type="image/png" sizes="400x400" href="/MONRIX/logo.png" /><link rel="apple-touch-icon" href="/MONRIX/logo.png" /><meta property="og:site_name" content="MONRIX" /><meta property="og:image" content="https://dellmodrun.github.io/MONRIX/banner.png" /><meta name="twitter:card" content="summary_large_image" /><meta name="twitter:image" content="https://dellmodrun.github.io/MONRIX/banner.png" />
   <script type="module" crossorigin src="/MONRIX/assets/modulepreload-polyfill-B5Qt9EMX.js"></script>
   <script type="module" crossorigin src="/MONRIX/assets/site-A2PvD1kf.js"></script>
   <link rel="stylesheet" crossorigin href="/MONRIX/assets/site-DsI4QA2_.css">
@@ -32,7 +32,7 @@
         <p>What it covers: everything this app sends, including the Monero wallet's connection to its node, the price data, the swap services and the trading data. What it cannot cover: other programs, and the Phantom browser extension, which has its own connection. The screen says which is which.</p>
         <div class="actions"><a class="btn sol" href="app.html?view=network">Run the browser checks</a><a class="btn grey" href="index.html#exposure">What this site sees about you</a></div>
         <h3>Built-in WireGuard, technically</h3>
-        <p>WireGuard is implemented in userspace inside Moneyero: the protocol via boringtun, a TCP/IP stack via smoltcp, and a local connector that only Moneyero's own HTTP client can reach. Paste a standard WireGuard configuration from any provider and connect.</p>
+        <p>WireGuard is implemented in userspace inside MONRIX: the protocol via boringtun, a TCP/IP stack via smoltcp, and a local connector that only MONRIX's own HTTP client can reach. Paste a standard WireGuard configuration from any provider and connect.</p>
         <ul>
           <li><b>Covers everything the app sends.</b> Solana RPC, Jupiter, GeckoTerminal, CoinGecko, all four swap providers, the Claude API, and the Monero daemon link. DNS is resolved inside the tunnel.</li>
           <li><b>Fails closed.</b> No handshake, no requests. There is no fallback to the clear network for application traffic.</li>
@@ -52,11 +52,11 @@
       <div class="phead"><span class="subject">Re: Network — technical details: scope, system tunnel, checks</span><span class="date">« <b>Reply #1</b> »</span></div>
       <div class="inner">
         <div class="quoteheader">Scope, stated plainly</div>
-        <div class="quote bad">The built-in VPN protects traffic that Moneyero itself generates. It cannot capture other programs, and it cannot capture a browser extension such as Phantom, which uses the browser's own network path. For whole-machine coverage Moneyero also controls the system tunnel below, and the interface shows which layer is protecting which traffic.</div>
+        <div class="quote bad">The built-in VPN protects traffic that MONRIX itself generates. It cannot capture other programs, and it cannot capture a browser extension such as Phantom, which uses the browser's own network path. For whole-machine coverage MONRIX also controls the system tunnel below, and the interface shows which layer is protecting which traffic.</div>
         <h3>System WireGuard</h3>
         <ul>
           <li>Import configs, bring tunnels up and down through the official binaries (needs Administrator on Windows), read live handshake and transfer counters.</li>
-          <li>Kill-switch state is inferred from the config and labelled as inferred. Moneyero writes no firewall rules.</li>
+          <li>Kill-switch state is inferred from the config and labelled as inferred. MONRIX writes no firewall rules.</li>
         </ul>
         <h3>Checks</h3>
         <table class="spec">
