@@ -1,0 +1,8 @@
+{
+  "name": "moneyero-local",
+  "private": true,
+  "scripts": {
+    "mirror": "node scripts/mirror.mjs",
+    "start": "node scripts/server.mjs"
+  }
+}
