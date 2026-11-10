@@ -26,6 +26,7 @@ const call = (method, params = {}) => new Promise((resolve) => {
 
 await call('Page.enable');
 await call('Runtime.enable');
+await call('Emulation.setDeviceMetricsOverride', { width: 1600, height: 760, deviceScaleFactor: 1, mobile: false });
 const results = [];
 for (const path of pages) {
   await call('Page.navigate', { url: `${baseUrl}${path}` });
@@ -38,15 +39,18 @@ for (const path of pages) {
       bodyLength: document.body?.innerText?.length || 0,
       scripts: document.scripts.length,
       brokenImages: [...document.images].filter((image) => image.complete && image.naturalWidth === 0).map((image) => image.src),
+      externalLinks: [...new Set([...document.querySelectorAll('a[href]')].map((anchor) => anchor.href).filter((href) => /^https?:/i.test(href)))],
+      legacyBrand: /moneyero|blackbox|trymoneyero/i.test(document.body?.innerText || ''),
       hasHeader: Boolean(document.querySelector('#header')),
       hasFooter: Boolean(document.querySelector('#footer'))
     })`,
     returnByValue: true,
   });
   results.push(JSON.parse(evaluated.result.result.value));
-  if (path === '/') {
+  if (path === '/' || path === '/app.html') {
     const screenshot = await call('Page.captureScreenshot', { format: 'png', captureBeyondViewport: true });
-    await writeFile(join(tmpdir(), 'monrix-local-home.png'), Buffer.from(screenshot.result.data, 'base64'));
+    const filename = path === '/' ? 'monrix-local-home.png' : 'monrix-local-app.png';
+    await writeFile(join(tmpdir(), filename), Buffer.from(screenshot.result.data, 'base64'));
   }
 }
 socket.close();
