@@ -3,7 +3,7 @@ import { dirname, extname, join } from 'node:path';
 import { spawnSync } from 'node:child_process';
 import { fileURLToPath } from 'node:url';
 
-const origin = 'https://dellmodrun.github.io/MONRIX/';
+const origin = 'https://monrix.run/';
 const outputUrl = new URL('../site/', import.meta.url);
 const output = fileURLToPath(outputUrl);
 const seeds = [
